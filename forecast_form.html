@@ -37,50 +37,13 @@
   <!-- venobox Style files -->
   <link href="assets/venobox/venobox.css" rel="stylesheet">
 
-  <link rel="manifest" href="assets/lib/manifest.json">
   <link rel="stylesheet" type="text/css" href="assets/lib/style.css">
   <link rel="stylesheet" type="text/css" href="assets/lib/style2.css">
+  <!--------table style lib------------------------>
+  <link rel="stylesheet" type="text/css" href="assets/datatables/dataTables.bootstrap4.css">
+  <link rel="stylesheet" type="text/css" href="assets/datatables/dataTables.bootstrap4.min.css">
   <style type="text/css">
-    .fore_table  th, .fore_table td {
-        padding: 3px 2px!important;
-        vertical-align: middle!important;
-        border: 1px solid #b9b9b9!important;
-    }
-    .fore_table thead tr:nth-child(1) th {
-        position: sticky;
-        top: 0px;
-        z-index: 999;
-        outline: 1px solid #8e8c8c;
-        border: 1px solid #8e8c8c;
-        font-size: 13px;
-        box-shadow: 0px 3px 4px 0px #8e8e8e;
-        white-space: nowrap;
-        vertical-align: middle;
-    }
-    .fore_table thead tr:nth-child(2) th {
-        position: sticky;
-        top: 25px;
-        z-index: 999;
-        outline: 1px solid #8e8c8c;
-        border: 1px solid #8e8c8c;
-        font-size: 13px;
-        box-shadow: 0px 3px 4px 0px #8e8e8e;
-        white-space: nowrap;
-        vertical-align: middle;
-    }
-    .head-3 th{
-        background: #002060;
-        color: white;
-    }
-    .head-4 th {
-        background: #e5dccd;
-        color: #000;
-    }
-    .table_fixed_height{
-      height: 59vh;
-      overflow: auto;
-      margin-bottom: 15px!important;
-    }
+
   </style>
 </head>
 <body class="bg-light">
@@ -219,136 +182,32 @@
         </div>
       </nav>
       <div class="container-fluid main_content bg-white p-2">
-        <div class="row mx-0">
-         <div class="table table-responsive table_fixed_height mb-0">
-            <table class="table table-bordered text-center fore_table mb-0">
-              <thead>
-                <tr class="head-3">
-                  <th width="5%" rowspan="2">Sales Channel</th>
-                  <th width="7%" rowspan="2">Entity</th>
-                  <th width="10%" colspan="2">2017</th>
-                  <th width="4%" colspan="2">2018</th>
-                  <th width="7%" colspan="2">2019</th>
-                  <th width="10%" colspan="2">2020</th>
-                  <th width="10%" colspan="2">2021</th>
-                  <th width="10%" colspan="2">Corrected FRC</th>
-                </tr>
-                <tr class="head-4">
-                  <th>S1</th>
-                  <th>S2</th>
-                  <th>S1</th>
-                  <th>S2</th>
-                  <th>S1</th>
-                  <th>S2</th>
-                  <th>S1</th>
-                  <th>S2</th>
-                  <th>S1</th>
-                  <th>S2</th>
-                  <th>S1</th>
-                  <th>S2</th>
-                </tr>
-              </thead>
-
-              <tbody style="font-size: 14px;">
-                <tr>
-                  <td><b>Total Sales</b></td>
-                  <td><b>Al Majed</b></td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                  <td>32786</td>
-                </tr>
-                <tr>
-                  <td>Franchise</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Retail</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Testahil Promotion</td>
-                  <td>Promotion</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>family sets</td>
-                  <td>Promotion</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-
-              </tbody>
-            </table> 
-          </div>
-          <div class="col-12 my-1">   
-            <div class="row mx-0">     
-              <div class="col-lg-4 col-md-5 col-5 text-center py-1">
-                <a class="btn btn-info btn-sm text-white preI" style="width: 33vh;">
-                <i class="fas fa-arrow-left"></i> Previous Item</a>
+        <div class="row mx-0 d-flex align-items-center" style="height: 68vh">
+          <div class="col-12 col-md-8 mx-auto text-center">
+            <div class="row mx-0">
+              <div class="col-12 col-md-7 mx-auto text-center mb-4">
+                <div class="form-group form-inline my-2">
+                  <label class="col-sm-4"><b>Article 1</b></label>&ensp;
+                  <select class="col-sm-7 form-control">
+                    <option>Select Materials</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+                <div class="form-group form-inline my-2">
+                  <label class="col-sm-4"><b>Article 1</b></label>&ensp;
+                  <input type="text" class="col-sm-7 form-control" name="">
+                </div>
+                <div class="form-group form-inline my-2">
+                  <label class="col-sm-4"><b>Article 1</b></label>&ensp;
+                  <input type="text" class="col-sm-7 form-control" name="">
+                </div>
+                <div class="form-group text-center my-3">
+                 <button class="btn btn-info" type="submit" onclick="window.location.href='forecasting.html'">Submit</button>
+                </div>
               </div>
-               <div class="col-lg-4 col-md-2 col-2 text-center py-1">
-                <!-- <a class="btn btn-info text-white cus-btn" style="width: 16vw;">
-                <i class="fas fa-save"></i> Save</a> -->
-              </div>
-              <div class="col-lg-4 col-md-5 col-5 text-center py-1">
-                <a class="btn btn-info btn-sm text-white nextI" style="width: 33vh;">
-                Next Item <i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div><br>
@@ -365,10 +224,28 @@
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 
+  <script src="assets/owl.carousel/owl.carousel.min.js"></script>
   <!-- aos script files -->
   <script src="assets/aos/aos.js"></script>
+  <!-- venobox script files -->
+  <script src="assets/venobox/venobox.min.js"></script>
+  <!-- script files -->
+  <script src="assets/lib/crs.min.js"></script>
+  <script src="assets/lib/script.js"></script>
+  <!--------table style lib------------------------>
+  <script src="assets/datatables/jquery.dataTables.min.js"></script>
+  <script src="assets/datatables/dataTables.bootstrap4.min.js"></script>
   <script type="text/javascript">
-    
+    $(document).ready(function() {
+        $('.example').DataTable( {
+            "scrollY":        "55vh",
+            "scrollCollapse": true,
+            "paging":         false,
+            "searching": false,
+            "lengthMenu": [ [15, 30, 50, 100, 250, 500, 1000, 1500], [15, 20, 50, 100, 250, 500, 1000, 1500] ],
+            "iDisplayLength": 1000,
+        } );
+    } );
   </script>
 </body>
 </html>
