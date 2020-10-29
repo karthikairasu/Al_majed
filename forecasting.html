@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/images/icon.png" sizes="194x194">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Titillium+Web|Changa|Montserrat|Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Titillium+Web|Roboto|Montserrat|Ubuntu&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,6 +45,7 @@
         padding: 3px 2px!important;
         vertical-align: middle!important;
         border: 1px solid #b9b9b9!important;
+        white-space: nowrap;
     }
     .fore_table thead tr:nth-child(1) th {
         position: sticky;
@@ -77,18 +78,117 @@
         color: #000;
     }
     .table_fixed_height{
-      height: 57vh;
+      height: 40vh;
       overflow: auto;
-      margin-bottom: 15px!important;
     }
+    .collapse td{
+      white-space: nowrap;
+      text-align: center;
+      border: 1px solid #b8daff!important;
+    }
+    .icon td:nth-child(1):after {
+      content: '-';
+      float: left;
+    }
+
+    .collapsed td:nth-child(1):after {
+      content: '+';
+    }
+    .highcharts-figure, .highcharts-data-table table {
+        min-width: 320px; 
+        max-width: 800px;
+        margin: 1em auto;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1em;
+        color: #555;
+    }
+    .highcharts-data-table th {
+      font-weight: 600;
+        padding: 0.5em;
+    }
+    .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+    .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+    .highcharts-credits{
+      display: none;
+    }
+    .highcharts-title{
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px!important;
+      text-shadow: 0 1px #808d93,-1px 0 #cdd2d5,-1px 2px #808d93,-2px 1px #cdd2d5,-2px 3px #808d93;
+    }
+    .highcharts-legend{
+      display: none;
+      height: 0px;
+    }
+    .highcharts-figure, .highcharts-data-table table {
+  min-width: 360px; 
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #EBEBEB;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+  padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+.chart_table th, .chart_table td {
+    padding: 1px 2px!important;
+    vertical-align: middle!important;
+    border-top: 1px solid #dee2e6!important;
+}{
+
+}
+
+
   </style>
 </head>
 <body class="bg-light">
-  <nav class="navbar fixed-top navbar-light bg-white topnav px-2 py-0" style="height: 108px;">
-   <div class="col-3" style="height:70px">
+ <nav class="navbar fixed-top navbar-light bg-white topnav px-2 py-0" style="height: 70px;">
+   <div class="col-3" style="height:40px">
      <div class="row mx-0">
        <div class="col-12 p-0">
-         <img class="" src="assets/images/logo_black.png" style="width:auto;height: 60px">
+         <img class="" src="assets/images/logo_black.png" style="width:auto;height: 40px">
       </div>
      </div>
    </div>
@@ -101,7 +201,7 @@
       <div class="row">
          <div class="col-2"></div>
          <div class="col-8 text-right">
-           <img class="" src="assets/images/icon2.png" height="50px" width="auto" style="margin:16px 10px">
+           <img class="" src="assets/images/icon2.png" height="40px" width="auto" style="margin:0px 10px">
          </div>
          <div class="col-2"></div>
       </div>
@@ -115,111 +215,66 @@
         <span class="time">08:09 PM</span> |
         <span class="help">Help</span>
     </div>
-  </nav><br><br><br><br>
-<div class="container-fluid px-0">
+  </nav><br><br>
+<div class="container-fluid px-0 mt-3">
   <div class="row mx-0">
     <div class="sidenav px-0 mt-2 bg-grey">
-      <ul class="list-group">
-        <li  class="nav-item bg-white" style="padding: 18px 20px;font-size: 16px">
-          &ensp;</li>
-      </ul>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mb-5 pb-5">
         <li class="nav-item my-1 active">
           <a class="nav-link" href="home.html">
             <i class="fas fa-tachometer-alt fs_18"></i>&ensp;  Forecasting</a>
         </li>
-        <!-- <li class="nav-item my-1">
+        <li class="nav-item my-1">
           <a class="nav-link" href="">
-            <i class="fas fa-store fs_18"></i>&ensp;  Home</a>
+            <i class="fas fa-ruler-combined fs_18"></i>&ensp;  Req Planning</a>
         </li>
-        <li class="nav-item mb-1">
-          <a class="nav-link" href=#>
-            <i class="fas fa-pills fs_18"></i> &ensp;Medical List</a>
+        <li class="nav-item my-1">
+          <a class="nav-link" href="">
+            <i class="fas fa-adjust fs_18"></i>&ensp;  Req Rm</a>
         </li>
-        <li class="nav-item mb-1">
-          <a class="nav-link" href="#">
-            <i class="fas fa-dolly-flatbed fs_18"></i> &ensp;Inventory</a>
+        <li class="nav-item my-1">
+          <a class="nav-link">
+            <i class="fab fa-artstation fs_18"></i>&ensp;  Repl Plan
+          </a>
         </li>
-        <li class="nav-item mb-1">
-          <a class="nav-link" href="#">
-            <i class="fas fa-balance-scale fs_18"></i> &ensp;Sales</a> -->
+        <li class="nav-item my-1" id="accordion">
+          <a class="nav-link" data-toggle="collapse" href="#collapseOne">
+            <i class="fas fa-database fs_18"></i>&ensp; Master Data
+          </a>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+             <ul class="navbar-nav sub_list">
+                <li class="nav-item">
+                  <a class="nav-link" href="">
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Product ms</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Bom</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Leadtime</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Store</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; plan</a>
+                </li>
+              </ul>
+          </div>
+        </li>
+        <li class="nav-item my-1">
+          <a class="nav-link" href="">
+            <i class="fas fa-clipboard fs_18"></i>&ensp;  Budget</a>
         </li>
       </ul>
     </div>
-    <div class="main px-3 py-5">
-      <nav class="navbar navbar-expand navbar-light bg-white shadow topsecnav py-0 px-0">
-        <a class="navbar-brand mr-0" href="#" style=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 57px">
-          <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="">
-              <i class="fas fa-copy fs_18"></i><br> 
-              Copy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-              <i class="fas fa-trash fs_18"></i><br> 
-              Delete</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-              <i class="fas fa-search fs_18"></i><br>  
-              Search</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-              <i class="fas fa-filter fs_18"></i><br> 
-              Filter</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-              <i class="fas fa-print fs_18"></i><br> 
-              Print</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-              <i class="fas fa-file-export fs_18"></i><br> 
-              Export</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-              <i class="fas fa-paperclip fs_18"></i><br> 
-              Attach</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-              <i class="fas fa-certificate fs_18"></i><br> 
-              Catelogue</a>
-            </li> -->
-          </ul>
-          <ul class="navbar-nav ml-auto">
-          <li class="nav-item px-2">
-            <a>
-              <form name="lang_switch" id="lang_switch">
-              <select name="lang" id="lang" class="form-control" style="box-shadow: none!important; border: 2px solid #45CBD3;">
-                <option value="english">English</option>
-                <option value="arabic">Arabic</option>
-              </select>
-            </form>
-            </a>
-          </li>
-          <li class="nav-item px-2 py-1">
-            <a href="index.html"><span class="badge badge-dark p-2" title="logout"><i class="fas fa-power-off"></i></span>
-            </a>
-          </li>
-          <li class="nav-item px-2 py-1">
-            <a>
-            </a>
-          </li>
-        </ul>
-        </div>
-      </nav>
+    <div class="main px-2 py-2">
       <div class="container-fluid main_content bg-white p-2">
-        <div class="row mx-0 px-2 py-2">
+        <div class="row mx-0 px-2 pt-2">
          <div class="table table-responsive table_fixed_height mb-0">
             <table class="table table-bordered text-center fore_table mb-0">
               <thead>
@@ -266,7 +321,7 @@
                   <td>32786</td>
                   <td>32786</td>
                 </tr>
-                <tr>
+                <tr data-toggle="collapse" data-target="#fr" class="accordion-toggle table-primary icon collapsed">
                   <td>Franchise</td>
                   <td></td>
                   <td></td>
@@ -282,7 +337,87 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
+                <tr class="hiddenRow accordian-body collapse" id="fr">
+                    <td></td>
+                    <td>S1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fr">
+                    <td></td>
+                    <td>S2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fr">
+                    <td></td>
+                    <td>S3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fr">
+                    <td></td>
+                    <td>S4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fr">
+                    <td></td>
+                    <td>S5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-toggle="collapse" data-target="#retail" class="accordion-toggle table-warning icon collapsed">
                   <td>Retail</td>
                   <td></td>
                   <td></td>
@@ -298,7 +433,168 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="retail">
+                    <td></td>
+                    <td>store10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr data-toggle="collapse" data-target="#tp" class="accordion-toggle table-info icon collapsed">
                   <td>Testahil Promotion</td>
                   <td>Promotion</td>
                   <td></td>
@@ -314,7 +610,104 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
+                <tr class="hiddenRow accordian-body collapse" id="tp">
+                    <td></td>
+                    <td>store1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="tp">
+                    <td></td>
+                    <td>store2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="tp">
+                    <td></td>
+                    <td>store3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="tp">
+                    <td></td>
+                    <td>store4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="tp">
+                    <td></td>
+                    <td>store5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="tp">
+                    <td></td>
+                    <td>store6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr data-toggle="collapse" data-target="#fmys" class="accordion-toggle table-danger icon collapsed">
                   <td>family sets</td>
                   <td>Promotion</td>
                   <td></td>
@@ -330,11 +723,169 @@
                   <td></td>
                   <td></td>
                 </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fmys">
+                    <td></td>
+                    <td>store1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fmys">
+                    <td></td>
+                    <td>store2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fmys">
+                    <td></td>
+                    <td>store3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fmys">
+                    <td></td>
+                    <td>store4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fmys">
+                    <td></td>
+                    <td>store5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="fmys">
+                    <td></td>
+                    <td>store6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
 
               </tbody>
             </table> 
           </div>
-          <div class="col-12 my-1">   
+          <div class="col-md-12 my-1 chart_main">  
+            <div class="row">
+              <div class="col-md-3 px-1">
+                <img src="assets/images/line.png" style="height: 200px; width: auto">
+              </div>
+              <div class="col-md-3 px-1 text-center">
+                 <img src="assets/images/pie.png" class="" style="height: 200px; width: auto">
+                <!-- <div class="card col-10 col-lg-12 mx-auto px-0">
+                  <div class="my-1" id="chartContainer" style="height: 200px; width: 100%;"></div>
+                  <div class="hide-link"></div>
+                </div> -->
+              </div>
+              <div class="col-md-3 px-1">
+                <img src="assets/images/bar.png" style="height: 200px; width: auto">
+                <!-- <div class="col-md-12 mx-auto px-0" style="height: 200px;">
+                  <figure class="highcharts-figure">
+                    <div id="sector_indiv" style="height: 200px;"></div>
+                    <p class="highcharts-description">
+                    </p>
+                  </figure>
+                </div> -->
+              </div>
+              <div class="col-md-3 pr-0 pt-5 text-center" style="padding-left: 60px">
+                <table class="table table-bordered table-sm chart_table">
+                  <thead>
+                    <tr>
+                      <th>s1</th>
+                      <th>s2</th>
+                      <th>s3</th>
+                      <th>s4</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">   
             <div class="row mx-0">     
               <div class="col-lg-4 col-md-5 col-5 text-center py-1">
                 <a class="btn btn-info btn-sm text-white preI" style="width: 33vh;">
@@ -367,8 +918,218 @@
 
   <!-- aos script files -->
   <script src="assets/aos/aos.js"></script>
+  <!-- hightchart files -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <!----------- canvasjs ------------>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery-ui.1.11.2.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
   <script type="text/javascript">
-    
+    window.onload = function () {
+
+      CanvasJS.addColorSet("greenShades",
+                  [//colorSet Array
+
+                  "#77BB00",
+                  "#FF9923", 
+                  "#00AAFF",              
+                  "#0054AC"                
+                  ]);
+
+    var options = {
+
+      colorSet: "greenShades",
+
+      title: {
+        text: "Quotation Ratio Report",
+        fontFamily: "Roboto",
+        fontColor: '#1a68ba'
+      },
+      subtitles: [{
+        text: ""
+      }],
+      animationEnabled: true,
+      data: [{
+        type: "pie",
+        startAngle: -60,
+        toolTipContent: "<b>{label}</b>: {y}",
+        showInLegend: "true",
+        legendText: "{label}",
+        indexLabelFontSize: 16,
+        indexLabel: "{label} - {y}",
+        dataPoints: [
+          { y: 200, label: "No Quotations" },
+          { y: 50, label: "One Quotation" },
+          { y: 288, label: "Two Quotation" },
+          { y: 1200, label: "Three and More" }
+        ]
+      }]
+    };
+    $("#chartContainer").CanvasJSChart(options);
+  }
+  </script>
+  <script type="text/javascript">    
+    var chart = Highcharts.chart('sector_indiv', {
+
+      chart: {
+        type: 'column'
+      },
+
+      title: {
+        text: 'Progress Report',
+            style: {
+                fontFamily: 'Signika',
+                fontSize:'10px',
+                fontWeight:'bold'
+            }
+      },
+
+      subtitle: {
+        text: ''
+      },
+
+      legend: {
+        align: 'right',
+        verticalAlign: 'middle',
+        layout: 'vertical'
+      },
+
+      xAxis: {
+        categories: ['Moh', 'Moda', 'Sfh', 'Kfmc', 'Kamc', 'Ngha'],
+        labels: {
+          x: -10
+        }
+      },
+
+      yAxis: {
+        allowDecimals: false,
+        title: {
+          text: 'Count'
+        }
+      },
+
+      series: [{
+        name: 'Accepted Quotations',
+        data: [1, 4, 3, 5, 7, 2],
+        color:'#95CEFF'
+      }, {
+        name: 'Rejected Quotations',
+        data: [6, 4, 2, 3, 5, 7],
+        color:'#FFB637'
+      }, {
+        name: 'Total Quotations',
+        data: [8, 4, 3, 4, 2, 6],
+        color:'#E58054'
+      }],
+
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 500
+          },
+          chartOptions: {
+            legend: {
+              align: 'center',
+              verticalAlign: 'bottom',
+              layout: 'horizontal'
+            },
+            yAxis: {
+              labels: {
+                align: 'left',
+                x: 0,
+                y: -5
+              },
+              title: {
+                text: null
+              }
+            },
+            subtitle: {
+              text: null
+            },
+            credits: {
+              enabled: false
+            }
+          }
+        }]
+      }
+    });
+
+
+        $('#plain').click(function () {
+            chart.update({
+                chart: {
+                    inverted: false,
+                    polar: false
+                },
+                subtitle: {
+                    text: 'Plain'
+                }
+            });
+        });
+
+        $('#inverted').click(function () {
+            chart.update({
+                chart: {
+                    inverted: true,
+                    polar: false
+                },
+                subtitle: {
+                    text: 'Inverted'
+                }
+            });
+        });
+
+        $('#polar').click(function () {
+            chart.update({
+                chart: {
+                    inverted: false,
+                    polar: true
+                },
+                subtitle: {
+                    text: 'Polar'
+                }
+            });
+        });
+
+  Highcharts.chart('Line_container', {
+    chart: {
+      type: 'line'
+    },
+    title: {
+      text: 'Monthly Average Temperature'
+    },
+    subtitle: {
+      text: 'Source: WorldClimate.com'
+    },
+    xAxis: {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+      title: {
+        text: 'Temperature (°C)'
+      }
+    },
+    plotOptions: {
+      line: {
+        dataLabels: {
+          enabled: true
+        },
+        enableMouseTracking: false
+      }
+    },
+    series: [{
+      name: 'Tokyo',
+      data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+    }, {
+      name: 'London',
+      data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+    }]
+  });
   </script>
 </body>
 </html>
