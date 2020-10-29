@@ -88,12 +88,12 @@
       border: 1px solid #b8daff!important;
     }
     .icon td:nth-child(1):after {
-      content: '+';
+      content: '-';
       float: left;
     }
 
     .collapsed td:nth-child(1):after {
-      content: '-';
+      content: '+';
     }
   </style>
 </head>
@@ -272,7 +272,7 @@
                   <td></td>
                   <td>340000</td>
                 </tr>
-                <tr data-toggle="collapse" data-target="#S1" class="accordion-toggle table-primary icon">
+                <tr data-toggle="collapse" data-target="#S1" class="accordion-toggle table-primary icon collapsed">
                   <td>02007</td>
                   <td>REEMA</td>
                   <td>2021</td>
@@ -434,14 +434,5 @@
 
   <!-- aos script files -->
   <script src="assets/aos/aos.js"></script>
-  <script type="text/javascript">
-    $("#accordion").on("hide.bs.collapse show.bs.collapse", e => {
-  $(e.target)
-    .prev()
-    .find("i:last-child")
-    .toggleClass("fa-minus fa-plus");
-});
-
-  </script>
 </body>
 </html>
