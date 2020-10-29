@@ -81,6 +81,11 @@
       overflow: auto;
       margin-bottom: 15px!important;
     }
+    .collapse td{
+      white-space: nowrap;
+      text-align: left;
+      border: 1px solid #b8daff!important;
+    }
   </style>
 </head>
 <body class="bg-light">
@@ -223,11 +228,13 @@
         </div>
       </nav>
       <div class="container-fluid main_content bg-white p-2">
-        <div class="row mx-0">
+        <div class="row mx-0 px-2 py-2">
          <div class="table table-responsive table_fixed_height mb-0">
             <table class="table table-bordered text-center fore_table mb-0">
               <thead>
                 <tr class="head-3">
+                  <th width="5%">Product #</th>
+                  <th width="5%">Discription</th>
                   <th width="5%">Year</th>
                   <th width="7%">Season</th>
                   <th width="10%">Forecast</th>
@@ -243,6 +250,8 @@
 
               <tbody style="font-size: 14px;">
                 <tr>
+                  <td>02007</td>
+                  <td>REEMA</td>
                   <td>2021</td>
                   <td>Year</td>
                   <td><b>58800</b></td>
@@ -254,9 +263,11 @@
                   <td></td>
                   <td>340000</td>
                 </tr>
-                <tr>
+                <tr data-toggle="collapse" data-target="#S1" class="accordion-toggle table-primary">
+                  <td>02007</td>
+                  <td>REEMA</td>
                   <td>2021</td>
-                  <td>S2</td>
+                  <td>S1</td>
                   <td>36500</td>
                   <td></td>
                   <td></td>
@@ -266,7 +277,66 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
+                <tr class="hiddenRow accordian-body collapse" id="S1">
+                    <td></td>
+                    <td>Retail</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S1">
+                    <td></td>
+                    <td>Franchise</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S1">
+                    <td></td>
+                    <td>Promotion</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S1">
+                    <td></td>
+                    <td>Family Sets</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr><!-- ======s1 collapse closed======= -->
+
+                <tr data-toggle="collapse" data-target="#S2" class="accordion-toggle table-info">
+                  <td>02007</td>
+                  <td>REEMA</td>
                   <td>2021</td>
                   <td>S2</td>
                   <td>22300</td>
@@ -278,7 +348,62 @@
                   <td></td>
                   <td></td>
                 </tr>
-                
+                <tr class="hiddenRow accordian-body collapse" id="S2">
+                    <td></td>
+                    <td>Retail</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S2">
+                    <td></td>
+                    <td>Franchise</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S2">
+                    <td></td>
+                    <td>Promotion</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S2">
+                    <td></td>
+                    <td>Family Sets</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr><!-- ======s2 collapse closed======= -->
 
               </tbody>
             </table> 
