@@ -71,6 +71,7 @@
     .head-3 th{
         background: #002060;
         color: white;
+        padding: 6px 2px!important;
     }
     .head-4 th {
         background: #e5dccd;
@@ -83,7 +84,7 @@
     }
     .collapse td{
       white-space: nowrap;
-      text-align: left;
+      text-align: center;
       border: 1px solid #b8daff!important;
     }
     .icon td:nth-child(1):after {
@@ -108,7 +109,7 @@
     <div class="col-6 text-center px-0">
       <h4 class="text-danger ff_mon">
         <!-- <img class="" src="assets/images/logo_black.png" style="width:auto;height: 60px"> -->
-        <b class="text_shadow8">Al-majed Forcasting</b></h4>
+        <b class="text_shadow8">Requirement RM</b></h4>
     </div>
     <div class="col-3 text-right px-0" style="font-size: 11px;font-weight: 600;"> 
       <div class="row">
@@ -134,20 +135,20 @@
     <div class="sidenav px-0 mt-2 bg-grey">
       <ul class="navbar-nav mb-5 pb-5">
         <li class="nav-item my-1">
-          <a class="nav-link" href="home.html">
-            <i class="fas fa-tachometer-alt fs_18"></i>&ensp;  Forecasting</a>
+          <a class="nav-link" href="forecast_form.html">
+            <i class="fas fa-tachometer-alt fs_18"></i>&ensp; Sales Forecast</a>
         </li>
         <li class="nav-item my-1">
           <a class="nav-link" href="requirement_planning.html">
-            <i class="fas fa-ruler-combined fs_18"></i>&ensp;  Req Planning</a>
+            <i class="fas fa-ruler-combined fs_18"></i>&ensp;  Requirements Planning</a>
         </li>
         <li class="nav-item my-1 active">
           <a class="nav-link" href="req_rm.html">
-            <i class="fas fa-adjust fs_18"></i>&ensp;  Req Rm</a>
+            <i class="fas fa-adjust fs_18"></i>&ensp;  Requirements RM</a>
         </li>
         <li class="nav-item my-1">
           <a class="nav-link" href="repl_plan.html">
-            <i class="fab fa-artstation fs_18"></i>&ensp;  Rep Planning
+            <i class="fab fa-artstation fs_18"></i>&ensp; Replenishment Planning
           </a>
         </li>
         <li class="nav-item my-1" id="accordion">
@@ -158,11 +159,11 @@
              <ul class="navbar-nav sub_list">
                 <li class="nav-item">
                   <a class="nav-link" href="product_master.html">
-                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Product ms</a>
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Product Master</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="bom.html">
-                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Bom</a>
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; BOM</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="leadtime.html">
@@ -174,7 +175,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="planning.html">
-                    <i class="fas fa-arrow-right fs_18"></i>&ensp; planning</a>
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Planning</a>
                 </li>
               </ul>
           </div>
@@ -192,176 +193,348 @@
             <table class="table table-bordered text-center fore_table mb-0">
               <thead>
                 <tr class="head-3">
-                  <th width="5%">Product #</th>
-                  <th width="5%">Discription</th>
+                  <th width="5%">Material ID</th>
+                  <th width="20%">Material</th>
                   <th width="5%">Year</th>
                   <th width="7%">Season</th>
-                  <th width="10%">Forecast</th>
+                  <th width="7%">Forecast</th>
                   <th width="4%">Stock On Hand</th>
                   <th width="7%">Open orders</th>
-                  <th width="10%">Expected Sale</th>
-                  <th width="10%">Leadtime</th>
-                  <th width="10%">Safety Stock</th>
-                  <th width="10%">Target Stock</th>
-                  <th width="10%">Requirment</th>
+                  <th width="7%">Expected Cosumption</th>
+                  <th width="7%">Leadtime</th>
+                  <th width="7%">Safety Stock</th>
+                  <th width="7%">Requirment</th>
                 </tr>
               </thead>
 
               <tbody style="font-size: 14px;">
-                <tr>
-                  <td>02007</td>
-                  <td>REEMA</td>
+                
+                <tr data-toggle="collapse" data-target="#S1" class="accordion-toggle table-primary  icon collapsed">
+                  <td>02083</td>
+                  <td> Glare mattress -فراش وهج   </td>
                   <td>2021</td>
                   <td>Year</td>
-                  <td><b>58800</b></td>
+                  <td>58800</td>
                   <td>21000</td>
                   <td>12000</td>
                   <td>2400</td>
                   <td>30</td>
                   <td>5800</td>
-                  <td></td>
-                  <td>340000</td>
-                </tr>
-                <tr data-toggle="collapse" data-target="#S1" class="accordion-toggle table-primary  icon collapsed">
-                  <td>02007</td>
-                  <td>REEMA</td>
-                  <td>2021</td>
-                  <td>S1</td>
-                  <td>36500</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>34000</td>
                 </tr>
                 <tr class="hiddenRow accordian-body collapse" id="S1">
                     <td></td>
-                    <td>Retail</td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
+                    <td>36500</td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>36500</td>
                 </tr>
                 <tr class="hiddenRow accordian-body collapse" id="S1">
                     <td></td>
-                    <td>Franchise</td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
+                    <td>22300</td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>22300</td>
                 </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S1">
-                    <td></td>
-                    <td>Promotion</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S1">
-                    <td></td>
-                    <td>Family Sets</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr><!-- ======s1 collapse closed======= -->
+               
 
-                <tr data-toggle="collapse" data-target="#S2" class="accordion-toggle table-info  icon collapsed">
-                  <td>02007</td>
-                  <td>REEMA</td>
+                <tr data-toggle="collapse" data-target="#S2" class="accordion-toggle table-secondary  icon collapsed">
+                  <td>2208302</td>
+                  <td>كرتون فراش وهج </td>
                   <td>2021</td>
-                  <td>S2</td>
-                  <td>22300</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>Year</td>
+                  <td>12500</td>
+                  <td>27000</td>
+                  <td>0</td>
+                  <td>3000</td>
+                  <td>30</td>
+                  <td>2500</td>
+                  <td>0</td>
                 </tr>
                 <tr class="hiddenRow accordian-body collapse" id="S2">
                     <td></td>
-                    <td>Retail</td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>0</td>
                 </tr>
                 <tr class="hiddenRow accordian-body collapse" id="S2">
                     <td></td>
-                    <td>Franchise</td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>0</td>
+                </tr><!-- ======s2 collapse closed======= -->
+
+
+
+                <tr data-toggle="collapse" data-target="#S3" class="accordion-toggle table-primary  icon collapsed">
+                  <td>2208305</td>
+                  <td>عطر فراش وهج جاهز للتعبئه</td>
+                  <td>2021</td>
+                  <td>Year</td>
+                  <td>6900</td>
+                  <td>8500</td>
+                  <td>2500</td>
+                  <td>2800</td>
+                  <td>30</td>
+                  <td>1500</td>
+                  <td>200</td>
                 </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S2">
-                    <td></td>
-                    <td>Promotion</td>
+                <tr class="hiddenRow accordian-body collapse" id="S3">
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>0</td>
                 </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S2">
-                    <td></td>
-                    <td>Family Sets</td>
+                <tr class="hiddenRow accordian-body collapse" id="S3">
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>0</td>
+                </tr><!-- ======s2 collapse closed======= -->
+
+
+
+                <tr data-toggle="collapse" data-target="#S4" class="accordion-toggle table-secondary  icon collapsed">
+                  <td>2208306</td>
+                  <td>قارورة فراش وهج بدون كاب بمب</td>
+                  <td>2021</td>
+                  <td>Year</td>
+                  <td>2800</td>
+                  <td>1400</td>
+                  <td>600</td>
+                  <td>200</td>
+                  <td>30</td>
+                  <td>400</td>
+                  <td>1400</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S4">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S4">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr><!-- ======s2 collapse closed======= -->
+
+
+                <tr data-toggle="collapse" data-target="#S5" class="accordion-toggle table-primary  icon collapsed">
+                  <td>2208307</td>
+                  <td>بمب فراش وهج  </td>
+                  <td>2021</td>
+                  <td>Year</td>
+                  <td>28000</td>
+                  <td>12000</td>
+                  <td>6000</td>
+                  <td>2600</td>
+                  <td>30</td>
+                  <td>4000</td>
+                  <td>16600</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S5">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S5">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr><!-- ======s2 collapse closed======= -->
+
+
+                <tr data-toggle="collapse" data-target="#S6" class="accordion-toggle table-secondary  icon collapsed">
+                  <td>2208308</td>
+                  <td>كاب فراش وهج</td>
+                  <td>2021</td>
+                  <td>Year</td>
+                  <td>35200</td>
+                  <td>45000</td>
+                  <td>2500</td>
+                  <td>4500</td>
+                  <td>30</td>
+                  <td>5400</td>
+                  <td>0</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S6">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S6">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr><!-- ======s2 collapse closed======= -->
+
+                <tr data-toggle="collapse" data-target="#S7" class="accordion-toggle table-primary icon collapsed">
+                  <td>1535</td>
+                  <td>كرتون فارغ لتعبئة العطور56603   - 3665 </td>
+                  <td>2021</td>
+                  <td>Year</td>
+                  <td>2800</td>
+                  <td>3400</td>
+                  <td>1200</td>
+                  <td>1070</td>
+                  <td>30</td>
+                  <td>350</td>
+                  <td>0</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S7">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S7">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr><!-- ======s2 collapse closed======= -->
+
+
+                <tr data-toggle="collapse" data-target="#S8" class="accordion-toggle table-secondary  icon collapsed">
+                  <td>1540</td>
+                  <td>شرنك تغليف للعطور (بالكيلو) </td>
+                  <td>2021</td>
+                  <td>Year</td>
+                  <td>35000</td>
+                  <td>14630</td>
+                  <td>12500</td>
+                  <td>6400</td>
+                  <td>30</td>
+                  <td>3800</td>
+                  <td>18070</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S8">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr class="hiddenRow accordian-body collapse" id="S8">
+                    <td></td>
+                    <td></td>
+                    <td>2021</td>
+                    <td>S2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
                 </tr><!-- ======s2 collapse closed======= -->
 
               </tbody>

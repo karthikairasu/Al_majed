@@ -71,13 +71,14 @@
     .head-3 th{
         background: #002060;
         color: white;
+        padding: 6px 2px!important;
     }
     .head-4 th {
         background: #e5dccd;
         color: #000;
     }
     .table_fixed_height{
-      height: 55vh;
+      height: 32vh;
       overflow: auto;
       margin-bottom: 15px!important;
     }
@@ -95,7 +96,7 @@
     <div class="col-6 text-center px-0">
       <h4 class="text-danger ff_mon">
         <!-- <img class="" src="assets/images/logo_black.png" style="width:auto;height: 60px"> -->
-        <b class="text_shadow8">Al-majed Forcasting</b></h4>
+        <b class="text_shadow8">Replenishment Planning</b></h4>
     </div>
     <div class="col-3 text-right px-0" style="font-size: 11px;font-weight: 600;"> 
       <div class="row">
@@ -121,20 +122,20 @@
     <div class="sidenav px-0 mt-2 bg-grey">
       <ul class="navbar-nav mb-5 pb-5">
         <li class="nav-item my-1">
-          <a class="nav-link" href="home.html">
-            <i class="fas fa-tachometer-alt fs_18"></i>&ensp;  Forecasting</a>
+          <a class="nav-link" href="forecast_form.html">
+            <i class="fas fa-tachometer-alt fs_18"></i>&ensp; Sales Forecast</a>
         </li>
         <li class="nav-item my-1">
           <a class="nav-link" href="requirement_planning.html">
-            <i class="fas fa-ruler-combined fs_18"></i>&ensp;  Req Planning</a>
+            <i class="fas fa-ruler-combined fs_18"></i>&ensp;  Requirements Planning</a>
         </li>
         <li class="nav-item my-1">
           <a class="nav-link" href="req_rm.html">
-            <i class="fas fa-adjust fs_18"></i>&ensp;  Req Rm</a>
+            <i class="fas fa-adjust fs_18"></i>&ensp;  Requirements RM</a>
         </li>
         <li class="nav-item my-1 active">
           <a class="nav-link" href="repl_plan.html">
-            <i class="fab fa-artstation fs_18"></i>&ensp;  Rep Planning
+            <i class="fab fa-artstation fs_18"></i>&ensp; Replenishment Planning
           </a>
         </li>
         <li class="nav-item my-1" id="accordion">
@@ -145,11 +146,11 @@
              <ul class="navbar-nav sub_list">
                 <li class="nav-item">
                   <a class="nav-link" href="product_master.html">
-                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Product ms</a>
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Product Master</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="bom.html">
-                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Bom</a>
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; BOM</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="leadtime.html">
@@ -161,7 +162,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="planning.html">
-                    <i class="fas fa-arrow-right fs_18"></i>&ensp; planning</a>
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; Planning</a>
                 </li>
               </ul>
           </div>
@@ -174,29 +175,29 @@
     </div>
     <div class="main px-2 py-2">
       <div class="container-fluid main_content bg-white p-2">
-        <div class="row mx-0 px-2 py-2">
-         <table class="table table-borderless table-sm">
-          <thead>
-            <tr>
-              <th width="1%"></th>
-               <th width="10%">Supplying WH :</th>
-               <th width="10%">Main Warehouse</th>
-               <th width="20%"></th>
-               <th width="5%">Date :</th>
-               <th width="8%">27.10.2020</th>
-               <th width="2%"></th>
-            </tr>
-            <tr>
-               <th width="%"></th>
-               <th width="%">Store :</th>
-               <th width="%">410001-01</th>
-               <th width="%"></th>
-               <th width="%"></th>
-               <th width="%"></th>
-               <th width="%"></th>
-             </tr>
-          </thead>
-        </table>
+        <div class="row mx-0 px-2 pb-2">
+         <table class="table table-borderless table-sm mb-0">
+            <thead>
+              <tr>
+                <th width="1%"></th>
+                 <th width="5%">Supplying WH :</th>
+                 <th width="7%">Main Warehouse</th>
+                 <th width="20%"></th>
+                 <th width="5%">Date :</th>
+                 <th width="8%">27.10.2020</th>
+                 <th width="2%"></th>
+              </tr>
+              <tr>
+                 <th width="%"></th>
+                 <th width="%">Store :</th>
+                 <th width="%">410001-01</th>
+                 <th width="%"></th>
+                 <th width="%"></th>
+                 <th width="%"></th>
+                 <th width="%"></th>
+               </tr>
+            </thead>
+         </table>
          <div class="table table-responsive table_fixed_height mb-0">
             <table class="table table-bordered text-center fore_table mb-0">
               <thead>
@@ -217,108 +218,248 @@
                 <tr>
                   <td>02001</td>
                   <td> AL KHAS / بخاخ الخاص</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>35.5</td>
+                  <td>50</td>
+                  <td>20</td>
+                  <td>2</td>
+                  <td>10</td>
+                  <td>50</td>
+                  <td>14.5</td>
                 </tr>
                 <tr>
                   <td>02003</td>
                   <td>MOKHALLAT MAMUL MABSUS/ مخلط المعمول والمبسوس   </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>224</td>
+                  <td>400</td>
+                  <td>170</td>
+                  <td>2</td>
+                  <td>90</td>
+                  <td>400</td>
+                  <td>176</td>
                 </tr>
                 <tr>
                   <td>02007</td>
                   <td>REEMA/بخاخ ريما </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>167</td>
+                  <td>300</td>
+                  <td>120</td>
+                  <td>2</td>
+                  <td>80</td>
+                  <td>300</td>
+                  <td>133</td>
                 </tr>
                 <tr>
                   <td>02008</td>
                   <td>FRASH REEMA/ فراش ريما   </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>23</td>
+                  <td>50</td>
+                  <td>10</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>50</td>
+                  <td>27</td>
                 </tr>
                 <tr>
                   <td>02012</td>
                   <td>WAHAJ /بخاخ وهج  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>755</td>
+                  <td>1000</td>
+                  <td>500</td>
+                  <td>2</td>
+                  <td>200</td>
+                  <td>1000</td>
+                  <td>245</td>
                 </tr>
                 <tr>
                   <td>02021</td>
                   <td>DIHIN ALAZARIYAH/عطر العاذريه دهن بالعلبه  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>28</td>
+                  <td>40</td>
+                  <td>15</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>40</td>
+                  <td>12</td>
                 </tr>
                 <tr>
                   <td>02022</td>
                   <td>FRASH ALAZARIYAH/بخاخ فراش العاذرية  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>67</td>
+                  <td>120</td>
+                  <td>35</td>
+                  <td>2</td>
+                  <td>15</td>
+                  <td>120</td>
+                  <td>53</td>
                 </tr>
                 <tr>
                   <td>02024</td>
                   <td>ALMAMLAKA KHAS / بخاخ المملكة الخاص    </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>45</td>
+                  <td>80</td>
+                  <td>20</td>
+                  <td>2</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>35</td>
                 </tr>
                 <tr>
                   <td>02026</td>
                   <td> FRASH ALFAKHAMA /بخاخ خلطة فراش الفخامة  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>29</td>
+                  <td>40</td>
+                  <td>15</td>
+                  <td>2</td>
+                  <td>6</td>
+                  <td>40</td>
+                  <td>11</td>
+                </tr>
+
+              </tbody>
+            </table> 
+
+          </div>
+
+         <table class="">
+                <thead>
+                    <tr>
+                       <th width="%"></th>
+                       <th width="%">Store :</th>
+                       <th width="%">410001-02</th>
+                       <th width="%"></th>
+                       <th width="%"></th>
+                       <th width="%"></th>
+                       <th width="%"></th>
+                     </tr>
+                </thead>
+            </table>
+          <div class="table table-responsive table_fixed_height mb-0">
+            <table class="table table-bordered text-center fore_table mb-0">
+              <thead>
+                <tr class="head-3">
+                  <th width="5%">Product code</th>
+                  <th width="20%">Product</th>
+                  <th width="4%">Stock On Hand</th>
+                  <th width="7%">Maximum Stock</th>
+                  <th width="7%">Re order point</th>
+                  <th width="7%">Leadtime</th>
+                  <th width="7%">Safety Stock</th>
+                  <th width="7%">Target Stock</th>
+                  <th width="7%">Requirment</th>
+                </tr>
+              </thead>
+
+              <tbody style="font-size: 14px;">
+                <tr>
+                  <td>02001</td>
+                  <td>SUKOON 2 /بخاخ سكون 2  </td>
+                  <td>64</td>
+                  <td>100</td>
+                  <td>20</td>
+                  <td>2</td>
+                  <td>10</td>
+                  <td>100</td>
+                  <td>36</td>
+                </tr>
+                <tr>
+                  <td>02003</td>
+                  <td>FRASH REETAJ فراش ريتاج  </td>
+                  <td>49</td>
+                  <td>100</td>
+                  <td>30</td>
+                  <td>2</td>
+                  <td>15</td>
+                  <td>100</td>
+                  <td>51</td>
+                </tr>
+                <tr>
+                  <td>02007</td>
+                  <td>MISK AL SHUYOG /بخاخ مسك الشيوخ </td>
+                  <td>47</td>
+                  <td>200</td>
+                  <td>70</td>
+                  <td>2</td>
+                  <td>30</td>
+                  <td>200</td>
+                  <td>153</td>
+                </tr>
+                <tr>
+                  <td>02008</td>
+                  <td>ROSHAN /بخاخ روشان الجديد </td>
+                  <td>24</td>
+                  <td>50</td>
+                  <td>10</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>50</td>
+                  <td>26</td>
+                </tr>
+                <tr>
+                  <td>02012</td>
+                  <td>HOOR /بخاخ حور </td>
+                  <td>179</td>
+                  <td>600</td>
+                  <td>150</td>
+                  <td>2</td>
+                  <td>80</td>
+                  <td>600</td>
+                  <td>421</td>
+                </tr>
+                <tr>
+                  <td>02021</td>
+                  <td>MASHAIR /بخاخ مشاعر </td>
+                  <td>13</td>
+                  <td>40</td>
+                  <td>15</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>40</td>
+                  <td>27</td>
+                </tr>
+                <tr>
+                  <td>02022</td>
+                  <td>TOULEENA /بخاخ تولينا  </td>
+                  <td>88</td>
+                  <td>120</td>
+                  <td>35</td>
+                  <td>2</td>
+                  <td>15</td>
+                  <td>120</td>
+                  <td>32</td>
+                </tr>
+                <tr>
+                  <td>02024</td>
+                  <td>RAYEE /بخاخ رائع الجديد  </td>
+                  <td>26</td>
+                  <td>80</td>
+                  <td>20</td>
+                  <td>2</td>
+                  <td>12</td>
+                  <td>80</td>
+                  <td>54</td>
+                </tr>
+                <tr>
+                  <td>02026</td>
+                  <td>BLACK SECRET /بلاك سكرت /</td>
+                  <td>29</td>
+                  <td>40</td>
+                  <td>15</td>
+                  <td>2</td>
+                  <td>6</td>
+                  <td>40</td>
+                  <td>11</td>
                 </tr>
 
               </tbody>
             </table> 
           </div>
+        
+
         </div>
-      </div><br>
+      </div>
+
+
+
     </div>
   </div>
   
