@@ -42,10 +42,9 @@
   <link rel="stylesheet" type="text/css" href="assets/lib/style2.css">
   <style type="text/css">
     .fore_table  th, .fore_table td {
-      padding: 3px 2px!important;
-      vertical-align: middle!important;
-      border: 1px solid #b9b9b9!important;
-      white-space: nowrap;
+        padding: 3px 2px!important;
+        vertical-align: middle!important;
+        border: 1px solid #b9b9b9!important;
     }
     .fore_table thead tr:nth-child(1) th {
         position: sticky;
@@ -78,22 +77,9 @@
         color: #000;
     }
     .table_fixed_height{
-      height: 59vh;
+      height: 55vh;
       overflow: auto;
       margin-bottom: 15px!important;
-    }
-    .collapse td{
-      white-space: nowrap;
-      text-align: center;
-      border: 1px solid #b8daff!important;
-    }
-    .icon td:nth-child(1):after {
-      content: '-';
-      float: left;
-    }
-
-    .collapsed td:nth-child(1):after {
-      content: '+';
     }
   </style>
 </head>
@@ -138,7 +124,7 @@
           <a class="nav-link" href="home.html">
             <i class="fas fa-tachometer-alt fs_18"></i>&ensp;  Forecasting</a>
         </li>
-        <li class="nav-item my-1 active">
+        <li class="nav-item my-1">
           <a class="nav-link" href="requirement_planning.html">
             <i class="fas fa-ruler-combined fs_18"></i>&ensp;  Req Planning</a>
         </li>
@@ -148,17 +134,17 @@
         </li>
         <li class="nav-item my-1">
           <a class="nav-link" href="repl_plan.html">
-            <i class="fab fa-artstation fs_18"></i>&ensp; Rep Planning
+            <i class="fab fa-artstation fs_18"></i>&ensp;  Rep Planning
           </a>
         </li>
-        <li class="nav-item my-1" id="accordion">
+        <li class="nav-item my-1 active" id="accordion">
           <a class="nav-link" data-toggle="collapse" href="#collapseOne">
             <i class="fas fa-database fs_18"></i>&ensp; Master Data
           </a>
-          <div id="collapseOne" class="collapse" data-parent="#accordion">
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
              <ul class="navbar-nav sub_list">
                 <li class="nav-item">
-                  <a class="nav-link" href="">
+                  <a class="nav-link active" href="">
                     <i class="fas fa-arrow-right fs_18"></i>&ensp; Product ms</a>
                 </li>
                 <li class="nav-item">
@@ -175,7 +161,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">
-                    <i class="fas fa-arrow-right fs_18"></i>&ensp; plan</a>
+                    <i class="fas fa-arrow-right fs_18"></i>&ensp; planning</a>
                 </li>
               </ul>
           </div>
@@ -193,42 +179,38 @@
             <table class="table table-bordered text-center fore_table mb-0">
               <thead>
                 <tr class="head-3">
-                  <th width="5%">Product #</th>
-                  <th width="5%">Discription</th>
-                  <th width="5%">Year</th>
-                  <th width="7%">Season</th>
-                  <th width="10%">Forecast</th>
-                  <th width="4%">Stock On Hand</th>
-                  <th width="7%">Open orders</th>
-                  <th width="10%">Expected Sale</th>
-                  <th width="10%">Leadtime</th>
-                  <th width="10%">Safety Stock</th>
-                  <th width="10%">Target Stock</th>
-                  <th width="10%">Requirment</th>
+                  <th width="%">Product Code</th>
+                  <th width="%">Product Type</th>
+                  <th width="%">Prd Description</th>
+                  <th width="%">Prd Description AR</th>
+                  <th width="%">BUOM</th>
+                  <th width="%">Family Code</th>
+                  <th width="%">Main family group</th>
+                  <th width="%">FG Code</th>
+                  <th width="%">Family Group</th>
+                  <th width="%">SG2 Code</th>
+                  <th width="%">Sub Group2</th>
+                  <th width="%">SG3 Code</th>
+                  <th width="%">Sub Group3</th>
+                  <th width="%">Retail Code</th>
+                  <th width="%">Sales Unit</th>
+                  <th width="%">Cost Price</th>
+                  <th width="%">Sales Price</th>
                 </tr>
               </thead>
 
               <tbody style="font-size: 14px;">
                 <tr>
-                  <td>02007</td>
-                  <td>REEMA</td>
-                  <td>2021</td>
-                  <td>Year</td>
-                  <td><b>58800</b></td>
-                  <td>21000</td>
-                  <td>12000</td>
-                  <td>2400</td>
-                  <td>30</td>
-                  <td>5800</td>
                   <td></td>
-                  <td>340000</td>
-                </tr>
-                <tr data-toggle="collapse" data-target="#S1" class="accordion-toggle table-primary icon collapsed">
-                  <td>02007</td>
-                  <td>REEMA</td>
-                  <td>2021</td>
-                  <td>S1</td>
-                  <td>36500</td>
+                  <td>Forecast</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>D</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -237,133 +219,6 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S1">
-                    <td></td>
-                    <td>Retail</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S1">
-                    <td></td>
-                    <td>Franchise</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S1">
-                    <td></td>
-                    <td>Promotion</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S1">
-                    <td></td>
-                    <td>Family Sets</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr><!-- ======s1 collapse closed======= -->
-
-                <tr data-toggle="collapse" data-target="#S2" class="accordion-toggle table-info icon collapsed">
-                  <td>02007</td>
-                  <td>REEMA</td>
-                  <td>2021</td>
-                  <td>S2</td>
-                  <td>22300</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S2">
-                    <td></td>
-                    <td>Retail</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S2">
-                    <td></td>
-                    <td>Franchise</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S2">
-                    <td></td>
-                    <td>Promotion</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="hiddenRow accordian-body collapse" id="S2">
-                    <td></td>
-                    <td>Family Sets</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr><!-- ======s2 collapse closed======= -->
 
               </tbody>
             </table> 
@@ -385,5 +240,8 @@
 
   <!-- aos script files -->
   <script src="assets/aos/aos.js"></script>
+  <script type="text/javascript">
+    
+  </script>
 </body>
 </html>

@@ -22,7 +22,7 @@
   width: 87%;
 }
 .sidenav .navbar-nav .nav-link {
-  padding: 13px 20px!important;
+  padding: 8px 8px 12px 20px!important;
   color: #0e5099!important;
   font-size: 15px;
   font-weight: 600;
@@ -47,6 +47,12 @@
     padding-left: 30px!important;
     margin: 0px 0px;
     background: snow;
+}
+.sidenav .nav-item .sub_list .nav-item.active > .nav-link {
+    background: #dae8f7!important;
+    color: #495057!important;
+    text-decoration: none;
+    padding-left: 30px;
 }
 .topsecnav{
   position: fixed!important;
