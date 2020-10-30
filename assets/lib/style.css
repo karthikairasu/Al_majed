@@ -270,3 +270,6 @@ body{
     background-color: steelblue!important;
     color: #fff!important;
 }
+.collapse input{
+  width: 100px;
+}
