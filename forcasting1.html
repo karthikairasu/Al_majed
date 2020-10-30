@@ -176,11 +176,32 @@
     padding: 1px 2px!important;
     vertical-align: middle!important;
     border-top: 1px solid #dee2e6!important;
-}{
-
 }
-
-
+.animation{
+    right:   -150px;
+    height: 200px;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+@keyframes mymove {
+  0%   {
+    right: -100px;
+    height: 200px;
+    transform: rotate(35deg);
+  }
+  25%  {
+    right: -10px;
+    height: 210px;
+  }
+  75%  {
+    right: 0px
+    height: 230px;
+  }
+  100% {
+    right: 20px;
+    height: 260px;
+  }
+}
   </style>
 </head>
 <body class="bg-light">
@@ -195,7 +216,7 @@
     <div class="col-6 text-center px-0">
       <h4 class="text-danger ff_mon">
         <!-- <img class="" src="assets/images/logo_black.png" style="width:auto;height: 60px"> -->
-        <b class="text_shadow8">01300 -خمرية الماجد< </b></h4>
+        <b class="text_shadow8">01300 -خمرية الماجد </b></h4>
     </div>
     <div class="col-3 text-right px-0" style="font-size: 11px;font-weight: 600;"> 
       <div class="row">
@@ -219,7 +240,7 @@
 <div class="container-fluid px-0 mt-3">
   <div class="row mx-0">
     <div class="sidenav px-0 mt-2 bg-grey">
-      <ul class="navbar-nav mb-5 pb-5">
+      <ul class="navbar-nav pb-2">
         <li class="nav-item my-1 active">
           <a class="nav-link" href="forecast_form.html">
             <i class="fas fa-tachometer-alt fs_18"></i>&ensp; Sales Forecast</a>
@@ -269,6 +290,13 @@
         <li class="nav-item my-1">
           <a class="nav-link" href="budget.html">
             <i class="fas fa-clipboard fs_18"></i>&ensp;  Budget</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item my-1">
+          <a class="nav-link" href="">
+            <img class="animation" src="assets/images/frc1.png" height="190px" width="auto" style="">
+          </a>
         </li>
       </ul>
     </div>
